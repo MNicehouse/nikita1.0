@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'workshops/index'
   devise_for :users
   root to: "pages#home"
+  get '/workshops', to: 'workshops#index'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
