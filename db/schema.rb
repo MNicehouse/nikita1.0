@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_095749) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_01_094540) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blog_posts", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.string "subtitle1"
+    t.text "subcontent"
+    t.string "author"
+    t.date "published_date"
+    t.string "category"
+    t.string "slug"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
