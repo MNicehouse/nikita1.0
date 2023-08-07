@@ -1,4 +1,7 @@
 // Graphical variables
+:root {
+  --bs-border-width: 1px; // Replace 1px with your desired border width value
+}
 @import "config/fonts";
 @import "config/colors";
 @import "config/bootstrap_variables";
