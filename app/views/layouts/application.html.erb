@@ -1,22 +1,29 @@
-<!DOCTYPE html>
+
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+
 <html>
   <head>
-    <title>Nikita10</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdn.jsdelivr.net/npm/stimulus@3.2.2/dist/stimulus.umd.min.js"></script>
+  <script src="https://unpkg.com/swiper@latest/swiper-bundle.min.js"></script>
+  <title>Nikita10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Include external stylesheet -->
+
+
+  <!-- Include Bootstrap icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= javascript_include_tag 'application' %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
         <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-  </head>
+  <!-- Other meta tags, CSRF tags, etc. -->
+</head>
 
   <body>
     <%= render "shared/navbar" %>
@@ -24,5 +31,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <!-- Add the following line at the end of the body section -->
+    <!-- Include Stimulus and Swiper JavaScript -->
+
+
+
   </body>
-</html>

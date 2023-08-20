@@ -1,2 +1,17 @@
-<h1>Admin::Dashboard#index</h1>
-<p>Find me in app/views/admin/dashboard/index.html.erb</p>
+  <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Projects Section-->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Admin::Dashboard</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                          <a href="<%= admin_blog_posts_path %>" class="btn btn-primary btn-lg btn-block">Blogbeiträge bearbeiten</a>
+                          <p></p>
+                          <a href="<%= new_admin_blog_post_path %>" class="btn btn-secondary btn-lg btn-block">Blogbeiträge hinzufügen</a>
+                          <button type="button" class="btn btn-primary btn-lg btn-block">Workshops bearbeiten</button>
+                            <p></p>
+                          <button type="button" class="btn btn-secondary btn-lg btn-block">Workshops hinzufügen</button>
+                        </div>
+                    </div>

@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def wertearbeit
   end
+
+  def kontakt
+  end
 end
