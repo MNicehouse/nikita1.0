@@ -24,3 +24,21 @@ COMMON_PUBLISHED_DATE = Date.new(2023, 8, 1) # Replace with your desired date
     status: STATUSES.sample
   )
 end
+
+10.times do |n|
+  Workshop.create!(
+    title: "Sample Workshop #{n + 1}",
+    sub_title: "Sub Title #{n + 1}",
+    sub_content: "Sub Content of Sample Workshop #{n + 1}.",
+    lerninhalte: "Learning content for Sample Workshop #{n + 1}.",
+    lernziele: "Learning objectives for Sample Workshop #{n + 1}.",
+    methode: "Teaching method for Sample Workshop #{n + 1}.",
+    workshopdescription: "Description for Sample Workshop #{n + 1}.",
+    author: AUTHORS.sample,
+    slug: "sample-workshop-#{n + 1}",
+    created_at: Time.now - (n + 1).days, # Adjust the created_at timestamp as needed
+    updated_at: Time.now - (n + 1).days, # Adjust the updated_at timestamp as needed
+    meta_title: "Meta Title for Sample Workshop #{n + 1}",
+    meta_description: "Meta Description for Sample Workshop #{n + 1}"
+  )
+end

@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 
   # Use resourceful routes for the BlogPost model
   resources :blog_posts, only: [:index, :show]
+  resources :workshops, only: [:index, :show]
 
   namespace :admin do
     root 'dashboard#index'
     resources :blog_posts, only: [:index, :edit, :show, :update, :new, :create]
+    resources :workshops, only: [:index, :edit, :show, :update, :new, :create]
   end
 end
