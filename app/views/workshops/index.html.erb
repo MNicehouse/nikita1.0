@@ -1,5 +1,4 @@
-
-    <body class="d-flex flex-column h-100 bg-light">
+  <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
             <!-- Projects Section-->
             <section class="py-5">
@@ -9,6 +8,24 @@
                     </div>
                     <div class="row gx-5 justify-content-center">
                         <div class="col-lg-11 col-xl-9 col-xxl-8">
+
+    <!-- Project Card 1-->
+    <% @workshops.each do |workshop| %>
+      <%= link_to workshop_path(workshop), class: "card-link" do %>
+        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+          <div class="card-body p-0">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+              <div class="p-5">
+                <h2 class="fw-bolder"><%= workshop.title %></h2>
+                <p><%= workshop.workshopdescription %></p>
+              </div>
+              <%= image_tag("workshops1.jpg", class: "img-fluid", alt: "bvcvb") %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
                             <!-- Project Card 1-->
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
